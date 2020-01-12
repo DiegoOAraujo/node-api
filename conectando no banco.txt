@@ -1,0 +1,26 @@
+//abre o terminal como root
+sudo su
+
+//para instalar o banco
+docker pull mongo
+
+//iniciar uma nova maquina virtual
+docker run --name mongodb -p 27017:27017 -d mongo
+
+//mongodb é o apelido escolhido para a imagem
+// -p direciona a porta, no caso, a porta padrão
+//mongo, é a imagem baixada no comando pull
+
+//lista as imagens
+docker ps
+docker ps -a //mostra todas as imagens, inclusive as que já estão rodando
+
+
+//se reiniciar o computador, para iniciar o banco, não é mais preciso usar o 'run'
+//basta iniciar o banco
+
+//iniciar o banco
+docker start mongodb
+
+//na pasta downloads, tem o robo3t, abre a pasta bin e executa o robo3t
+//para acessar o banco
