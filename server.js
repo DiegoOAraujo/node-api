@@ -4,6 +4,7 @@ const requireDir = require('require-dir');
 
 // iniciando o app
 const app = express();
+app.use(express.json()); //permitir enviar dados em formato JSON, mais usado em api REST
 
 //iniciando o DB
 try {
